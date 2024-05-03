@@ -1,7 +1,18 @@
 import React from "react";
-
-function todoList() {
-  return <div>TodoList</div>;
+import Todo from "./todo";
+export default function TodoList({ todos, deleteHandler, updateHandler }) {
+  return (
+    <div>
+      {todos.map((todo) => {
+        return (
+          <Todo
+            key={todo.id}
+            todo={todo}
+            deleteHandler={deleteHandler}
+            updateHandler={updateHandler}
+          />
+        );
+      })}
+    </div>
+  );
 }
-
-export default todoList;
