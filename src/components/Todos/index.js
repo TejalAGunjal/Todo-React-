@@ -8,7 +8,7 @@ const initialState = [
   { id: 3, message: "Finish tutorial video" },
 ];
 
-export default function Todos() {
+function Todos() {
   const [todoList, setTodoList] = useState(initialState);
 
   const deleteHandler = (id) => {
@@ -45,3 +45,4 @@ export default function Todos() {
     </div>
   );
 }
+export default Todos;
